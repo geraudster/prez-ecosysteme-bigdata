@@ -1,0 +1,107 @@
+#+TITLE:     L'écosystème Big Data en 2019
+#+AUTHOR:    Géraud Dugé de Bernonville
+#+EMAIL:     geraud.dugedebernonville@zenika.com
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/
+#+OPTIONS: toc:1
+#+LANGUAGE: fr
+#+REVEAL_HLEVEL: 2
+
+* Source
+
+https://learning.oreilly.com/videos/trends-in-ai/9781491996409/9781491996409-video313324
+
+** Big Model
+
+~> Deep Learning
+
+- Recommender Systems
+- NLP
+- Timeseries
+
+Nombreux outils : TF, Keras, PyTorch, Spark (BigDL de Intel), DL4J
+
+Nouveau poste : Machine Learning Engineer (entre Data Engineer et Data Scientist) =>
+- viennent de l'engineer et connaissent le Machine Learning
+- déploiement en prod
+
+=> vient du fait que les DS n'ont pas d'outils pour déployer en prod
+
+Clipper project => aide au déploiement (prend un notebook et le transform en dat aproduct)
+
+** Big Data
+
+bottleneck : quality and amount of training data
+
+if big Data is the new oil, training data is the new new oil
+
+*** Unsupervised data
+
+- trouver des regroupements
+- réduction de dimension
+- détection d'anomalies
+- => générer des données similaires (GANs)
+
+Pourquoi générer des données :
+- moins cher (pas la peine de payer des gens pour labeliser)
+- on apprend de ses données
+- permet de générer des scénarios, des simulations (par ex: voiture autonome)
+
+GAN, Variational Autoenoders, others
+
+Entre unsupervised et supervised => *weak supervised*
+Weak => moins de données labellisées, les sources:
+- Heuristics, avec des experts du domaine
+- Crowdsourcing
+- Boosting
+- distant supervision
+
+Data Programming: Creating Large Training Sets, Quickly
+
+Snorkel
+
+*** Realtime / Streaming
+
+Amplab : Spark, Alluxio
+
+Batch data -> Analytics
+
+RISE lab : live data, realtime decision
+
+Offline learning vs continuous learning
+
+Reinforcement learning
+
+In IoT, stream processing de données de devices, recalcul de modèles en temps reél (robotique)
+
+=> simulations, graph de calcul qui évolue, faible latence
+
+
+** Big Compute
+
+Scale, Throughput (high volume), Latency (fast answer), Power consumption
+
+Machine Learning infrastrucure :
+- open source software
+- matos héterogene
+- Hardware
+- réseau
+
+Pour le Deep Learning:
+- matos pour l'entrainement (GPU)
+- matos pour l'inference (CPU or other)
+
+ASIC pour inférence (latence est plus importante que le throughput)
+
+Microsoft FPGA (Intel / Altera) pour l'inférence, Project Catapult
+
+Nvidia Volta, bonne perf training et inférence avec faible consommation
+
+Training dans le cloud, inference on the edge
+
+En cours: compute on the edge
+
+Federated learning (securité, privacy), collaborative machine learning
+
+** Wrap up
+
+Côté IA: fairness, interpretability, privacy
