@@ -2,29 +2,37 @@
 #+AUTHOR:    Géraud Dugé de Bernonville
 #+EMAIL:     geraud.dugedebernonville@zenika.com
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/
-#+OPTIONS: toc:1
+#+OPTIONS: toc:1 num:nil
 #+LANGUAGE: fr
 #+REVEAL_HLEVEL: 2
+#+REVEAL_THEME: beige
 
-* Source
+* Three Big
 
-https://learning.oreilly.com/videos/trends-in-ai/9781491996409/9781491996409-video313324
+- Big Model
+- Big Data
+- Big Compute
 
 ** Big Model
 
-~> Deep Learning
+Deep Learning
 
-- Recommender Systems
-- NLP
-- Timeseries
+#+ATTR_REVEAL: :frag (t)
+    * Recommender Systems
+    * NLP
+    * Timeseries
 
-Nombreux outils : TF, Keras, PyTorch, Spark (BigDL de Intel), DL4J
+*** Nombreux outils
 
-Nouveau poste : Machine Learning Engineer (entre Data Engineer et Data Scientist) =>
+TF, Keras, PyTorch, Spark (BigDL de Intel), DL4J
+
+*** Machine Learning Engineer
+
+Entre Data Engineer et Data Scientist
 - viennent de l'engineer et connaissent le Machine Learning
 - déploiement en prod
 
-=> vient du fait que les DS n'ont pas d'outils pour déployer en prod
+Vient du fait que les Data Scientist n'ont pas d'outils pour déployer en prod
 
 Clipper project => aide au déploiement (prend un notebook et le transform en dat aproduct)
 
@@ -32,7 +40,12 @@ Clipper project => aide au déploiement (prend un notebook et le transform en da
 
 bottleneck : quality and amount of training data
 
-if big Data is the new oil, training data is the new new oil
+*** If big Data is the new oil...
+
+#+BEGIN_QUOTE
+#+ATTR_REVEAL: :frag appear
+...training data is the NEW new oil
+#+END_QUOTE
 
 *** Unsupervised data
 
@@ -41,14 +54,20 @@ if big Data is the new oil, training data is the new new oil
 - détection d'anomalies
 - => générer des données similaires (GANs)
 
-Pourquoi générer des données :
+*** Pourquoi générer des données
+
 - moins cher (pas la peine de payer des gens pour labeliser)
 - on apprend de ses données
 - permet de générer des scénarios, des simulations (par ex: voiture autonome)
 
+
+*** Outils
+
 GAN, Variational Autoenoders, others
 
-Entre unsupervised et supervised => *weak supervised*
+*** Weak Supervised
+
+Entre unsupervised et supervised
 Weak => moins de données labellisées, les sources:
 - Heuristics, avec des experts du domaine
 - Crowdsourcing
@@ -105,3 +124,8 @@ Federated learning (securité, privacy), collaborative machine learning
 ** Wrap up
 
 Côté IA: fairness, interpretability, privacy
+
+* Source
+
+https://learning.oreilly.com/videos/trends-in-ai/9781491996409/9781491996409-video313324
+
