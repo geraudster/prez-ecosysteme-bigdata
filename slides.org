@@ -1,13 +1,60 @@
 #+TITLE:     L'écosystème Big Data en 2019
-#+AUTHOR:    Géraud Dugé de Bernonville
+#+AUTHOR:    Géraud
 #+EMAIL:     geraud.dugedebernonville@zenika.com
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/
 #+OPTIONS: toc:1 num:nil
 #+LANGUAGE: fr
-#+REVEAL_HLEVEL: 2
+#+REVEAL_HLEVEL: 1
 #+REVEAL_THEME: beige
 
-* Three Big
+* Histoire
+
+#+ATTR_REVEAL: :frag (t)
+    * 1998 : The Next Wave of InfraStress - John  R. MasheyChief Scientist, SGI
+    * 2003 : The Google File System
+    * 2004 : MapReduce: Simplified Data Processing on Large Clusters
+    * 2006 : Hadoop 👶🐘 0.1.0
+
+#+REVEAL: split
+#+ATTR_REVEAL: :frag (t)
+    * 2009-2010 : NoSQL Buzz
+    * 2011 : Apache Kafka 🏎
+    * 2012 : Apache Spark ✨ (AMPLab Berkeley)
+    * 2019 : Hadoop 3.0.0, Apache Spark 2.4, Kafka 2.1
+
+#+REVEAL: split
+
+#+BEGIN_QUOTE
+"Machine learning and AI is a horizontal enabling layer. 
+
+... basically there's no institution in the world that cannot be improved with machine learning."
+--- Jeff Bezos
+#+END_QUOTE
+
+** 
+    :PROPERTIES:
+    :reveal_background: http://www.erogol.com/wp-content/uploads/2014/05/test.jpg
+    :reveal_background_trans: slide
+    :reveal_background_size: contain
+    :reveal_background_repeat: no-repeat
+    :END:
+
+** 
+
+#+BEGIN_QUOTE
+"Cloud is about how you do computing, not where you do computing." --- Paul Maritz
+#+END_QUOTE
+
+** 
+    :PROPERTIES:
+    :reveal_background: https://uploads.skyhighnetworks.com/wp-content/uploads/2018/07/29233518/2018-cloud-market-revenue-11.png
+    :reveal_background_trans: slide
+    :reveal_background_size: contain
+    :reveal_background_repeat: no-repeat
+    :END:
+
+
+* Les 3 /Big/
 
 - Big Model
 - Big Data
@@ -15,7 +62,7 @@
 
 ** Big Model
 
-Deep Learning
+🧠 Deep Learning 🧠
 
 #+ATTR_REVEAL: :frag (t)
     * Recommender Systems
@@ -24,21 +71,27 @@ Deep Learning
 
 *** Nombreux outils
 
-TF, Keras, PyTorch, Spark (BigDL de Intel), DL4J
+TensorFlow, Keras, PyTorch, Spark (BigDL de Intel), DL4J
 
 *** Machine Learning Engineer
 
-Entre Data Engineer et Data Scientist
-- viennent de l'engineer et connaissent le Machine Learning
+#+ATTR_REVEAL: :frag (t)
+😱 Déploiement en prod 😱
+
+Entre Data Engineer 🔧 et Data Scientist ⚗
+- vient de l'engineer et connaissent le Machine Learning
 - déploiement en prod
 
-Vient du fait que les Data Scientist n'ont pas d'outils pour déployer en prod
-
-Clipper project => aide au déploiement (prend un notebook et le transform en dat aproduct)
 
 ** Big Data
 
-bottleneck : quality and amount of training data
+#+ATTR_REVEAL: :frag (t)
+😱 Qualité et volume de données d'entrainement 😱
+
+
+#+ATTR_REVEAL: :frag (t)
+#+ATTR_HTML: :width 50%
+[[https://image.spreadshirtmedia.net/image-server/v1/products/124982866/views/1,width=650,height=650,appearanceId=2,version=1545027303/no-miracle-and-no-surprise.jpg]]
 
 *** If big Data is the new oil...
 
@@ -97,33 +150,30 @@ In IoT, stream processing de données de devices, recalcul de modèles en temps 
 
 ** Big Compute
 
-Scale, Throughput (high volume), Latency (fast answer), Power consumption
+💖 Scale, Throughput (high volume), Latency (fast answer), Power consumption 💖
 
-Machine Learning infrastrucure :
+*** L'essor du Cloud ☁
+
+#+ATTR_REVEAL: :frag (t)
 - open source software
 - matos héterogene
-- Hardware
+- Hardware (GPU, TPU, CPU, ASIC, FPGA,...)
 - réseau
 
-Pour le Deep Learning:
-- matos pour l'entrainement (GPU)
-- matos pour l'inference (CPU or other)
 
-ASIC pour inférence (latence est plus importante que le throughput)
-
-Microsoft FPGA (Intel / Altera) pour l'inférence, Project Catapult
-
-Nvidia Volta, bonne perf training et inférence avec faible consommation
-
+*** 
 Training dans le cloud, inference on the edge
 
 En cours: compute on the edge
 
 Federated learning (securité, privacy), collaborative machine learning
 
-** Wrap up
+* Next 🔮
 
-Côté IA: fairness, interpretability, privacy
+#+ATTR_REVEAL: :frag (t)
+    * Model : fairness, interpretability, privacy
+    * Data : weak supervised, génération de données
+    * Compute : Edge Computing
 
 * Source
 
